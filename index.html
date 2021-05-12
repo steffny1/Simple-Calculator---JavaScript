@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- add stylesheet from external file -->
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <title>Calculator</title>
+  </head>
+  <body onload="document.getElementById('userInput').focus();">
+    <!-- calculator -->
+    <div class="calculator" id="calculator">
+      <!-- display -->
+      <input
+        type="text"
+        class="display"
+        placeholder="Enter number"
+        id="userInput"
+        oninput="validate(this)"
+      />
+      <!-- keys -->
+      <div class="keys" id="keys">
+        <!-- 4 rows of keys -->
+        <div class="row" id="rowOne">
+          <button value="7" id="seven" class="number">7</button>
+          <button value="8" id="eight" class="number">8</button>
+          <button value="9" id="nine" class="number">9</button>
+          <button value="*" id="multiply" class="operator">*</button>
+          <button value="/" id="divide" class="operator">/</button>
+        </div>
+
+        <div class="row" id="rowTwo">
+          <button value="4" id="four" class="number">4</button>
+          <button value="5" id="five" class="number">5</button>
+          <button value="6" id="six" class="number">6</button>
+          <button value="+" id="plus" class="operator">+</button>
+          <button value="-" id="minus" class="operator">-</button>
+        </div>
+
+        <div class="row" id="rowThree">
+          <button value="1" id="one" class="number">1</button>
+          <button value="2" id="two" class="number">2</button>
+          <button value="3" id="three" class="number">3</button>
+        </div>
+
+        <div class="row" id="rowFour">
+          <div id="left-side">
+            <button value="0" id="zero" class="number">0</button>
+            <button value="." id="point" class="number">.</button>
+          </div>
+          <div id="right-side">
+            <button value="=" id="equals" class="operator">=</button>
+            <button value="C" id="clear" class="operator">C</button>
+            <button value="AC" id="clearAll" class="operator">AC</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- calculator body ends -->
+
+    <!-- calculator script in external file -->
+    <script type="text/javascript" src="calculator.js"></script>
+  </body>
+</html>
